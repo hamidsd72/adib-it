@@ -1,0 +1,122 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+@font-face{
+	font-display:swap;
+	font-family:iransansdn_standard;
+	font-style:normal;
+	font-weight:700;
+	src:url(../fonts/iransansdn/iransansdnbold.eot);
+	src:url('../fonts/iransansdn/iransansdnbold.eot?#iefix') format('embedded-opentype'),
+	url(../fonts/iransansdn/iransansdnbold.woff) format('woff')
+}
+@font-face{
+	font-display:swap;
+	font-family:iransansdn_standard;
+	font-style:normal;
+	font-weight:300;
+	src:url(../fonts/iransansdn/iransansdnlight.eot);
+	src:url('../fonts/iransansdn/iransansdnlight.eot?#iefix') format('embedded-opentype'),
+	url(../fonts/iransansdn/iransansdnlight.woff) format('woff')
+}
+@font-face{
+	font-display:swap;
+	font-family:iransansdn_standard;
+	font-style:normal;
+	font-weight:400;
+	src:url(../fonts/iransansdn/iransansdn.eot);
+	src:url('../fonts/iransansdn/iransansdn.eot?#iefix') format('embedded-opentype'),
+	url(../fonts/iransansdn/iransansdn.woff) format('woff')
+}
+@font-face{
+	font-display:swap;
+	font-family:iransansdn;
+	font-style:normal;
+	font-weight:700;
+	src:url(../fonts/iransansdn/iransansdnwebbold.eot);
+	src:url('../fonts/iransansdn/iransansdnwebbold.eot?#iefix') format('embedded-opentype'),
+	url(../fonts/iransansdn/iransansdnwebbold.woff) format('woff')
+}
+@font-face{
+	font-display:swap;
+	font-family:iransansdn;
+	font-style:normal;
+	font-weight:300;
+	src:url(../fonts/iransansdn/iransansdnweblight.eot);
+	src:url('../fonts/iransansdn/iransansdnweblight.eot?#iefix') format('embedded-opentype'),
+	url(../fonts/iransansdn/iransansdnweblight.woff) format('woff')
+}
+@font-face{
+	font-display:swap;
+	font-family:iransansdn;
+	font-style:normal;
+	font-weight:400;
+	src:url(../fonts/iransansdn/iransansdnweb.eot);
+	src:url('../fonts/iransansdn/iransansdnweb.eot?#iefix') format('embedded-opentype'),
+	url(../fonts/iransansdn/iransansdnweb.woff) format('woff')
+}
+  
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	zooom:1;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+h1 {
+	font-size: 34px;
+	  line-height: 45px;
+}
+h2 {
+	font-size: 24px;
+	margin-bottom: 20px;
+	padding-top: 20px;
+	line-height: 36px;
+}
+h3 {
+	font-size: 20px;
+	margin-bottom: 20px;
+	padding-top: 20px;
+}
+h4 {
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+h5 {
+	font-size: 16px;
+	margin-bottom: 10px;
+	letter-spacing: 1px;
+}
+h6 {
+	font-size: 15px;
+	margin-bottom: 10px;
+	font-weight: normal;
+}
+html, body, h1, h2, h3, h4, h4, h5, h6, p, div, span, a, body * {
+	font-family: 'iransansdn', sans-serif;
+}

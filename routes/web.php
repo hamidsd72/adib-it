@@ -12,6 +12,7 @@ use App\Models\Optimizer;
 use App\Http\Controllers\LandingController;
 use Intervention\Image\ImageManagerStatic as Image;
 use Illuminate\Http\Request;
+use App\Mail\Mail;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,6 +26,41 @@ use Illuminate\Http\Request;
 
 
 Auth::routes();
+
+
+Route::get('test', function (){
+    $text='<p>';
+    $text.='نام: ';
+    $text.='<strong>';
+    $text.='عادل نجفی';
+    $text.='</strong>';
+    $text.='</p>';
+    $text.='<p>';
+    $text.='شماره تماس: ';
+    $text.='<strong dir="ltr">';
+    $text.='09187107810';
+    $text.='</strong>';
+    $text.='</p>';
+    $text.='<p>';
+    $text.='ایمیل: ';
+    $text.='<strong dir="ltr">';
+    $text.='adeln1368@gmail.com';
+    $text.='</strong>';
+    $text.='</p>';
+    $text.='تاریخ ثبت: ';
+    $text.='<strong dir="ltr">';
+    $text.='2022-01-01 10:14:33';
+    $text.='</strong>';
+    $text.='</p>';
+    $details = [
+        'subject' => 'فرم لندینگ',
+        'title' => 'ارسال فرم',
+        'body' => $text
+    ];
+    \Mail::to('adeln1368@gmail.com')->send(new Mail($details));
+    return view('mail.landing',compact('details'));
+    dd('ok');
+});
 
 Route::get('/home', function(){
     return redirect('/');

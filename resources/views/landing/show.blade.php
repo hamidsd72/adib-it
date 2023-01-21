@@ -21,8 +21,8 @@
     .category-title a { font-size: 20px; font-weight: 500; }
     .course-category-item:hover .category-title a { font-weight: bold; color: #6c757d !important; transition: 0.8s; }
     @media screen and (min-width: 992px) { .blog-banner img { height: 420px; } .form-request { grid-template-columns: 2fr 3fr; } }
+    #a-not-decorative a , #a-not-decorative a:hover {color: var(--bs-gray-800) !important}
   </style>
-
 @endsection
 @section('meta')
   <meta name="keywords" content=" طراحی سایت | سئو و بهینه سازی سایت افزایش رتبه در گوگل | پشتیبانی سایت ">
@@ -39,9 +39,9 @@
       <section class="home" id="home">
         {{-- // 1 بخش اول - بنر بالای صغحه --}}
         {{-- <div class="deco-shape shape-1"><img src="{{url('assets/newFront/landing/new/img/shape-1.png')}}" alt="banner"></div> --}}
-        <div class="deco-shape shape-2"><img src="{{url('assets/newFront/landing/new/img/shape-2.png')}}" alt="banner"></div>
+        {{-- <div class="deco-shape shape-2"><img src="{{url('assets/newFront/landing/new/img/shape-2.png')}}" alt="banner"></div>
         <div class="deco-shape shape-3"><img src="{{url('assets/newFront/landing/new/img/shape-3.png')}}" alt="banner"></div>
-        <div class="deco-shape shape-4"><img src="{{url('assets/newFront/landing/new/img/shape-4.png')}}" alt="banner"></div>
+        <div class="deco-shape shape-4"><img src="{{url('assets/newFront/landing/new/img/shape-4.png')}}" alt="banner"></div> --}}
                     
         <div class="home-right">
           @foreach ($page->contentsOne() as $item)
@@ -75,7 +75,7 @@
           @if ($item->pic)
             <div class="home-left">
               <div class="img-box">
-                <img src="{{url('assets/newFront/landing/new/img/banner-img-bg.png')}}" alt="{{$item->title}}" class="background-shape">
+                {{-- <img src="{{url('assets/newFront/landing/new/img/banner-img-bg.png')}}" alt="{{$item->title}}" class="background-shape"> --}}
                 <img src="{{ url($item->pic) }}" alt="{{$item->title}}" class="banner-img">
               </div>
             </div>
@@ -121,7 +121,7 @@
         {{-- // 3 بخش سوم - درباره ما --}}
         <div class="about-right">
           <div class="img-box">
-            <img src="{{url('assets/newFront/landing/new/img/about-img-bg.png')}}" alt="" class="about-bg">
+            {{-- <img src="{{url('assets/newFront/landing/new/img/about-img-bg.png')}}" alt="" class="about-bg"> --}}
             @foreach ($page->contentsTree()->where('sort','1') as $item)
               @if ($item->pic)
                 <img src="{{url($item->pic)}}" alt="{{$item->title}}" class="about-img">
@@ -395,7 +395,9 @@
             @endforeach
 
             @foreach ($page->contentsTen()->where('sort','2') as $item)
-              <p class="section-text">{!! $item->description !!}</p>
+              <div id="a-not-decorative" class="section-text">
+                {!! $item->description !!}
+              </div>
             @endforeach
           </div>
         @endif
@@ -444,7 +446,7 @@
       <div class="modal-dialog mx-auto pt-5">
         <div class="modal-content">
           <form id="landing_form" action="{{ route('landing.page.send.message','fa') }}" method="POST">
-
+            <input type="hidden" name="landing" value="{{$item->title}}">
             <!-- Modal Header -->
             <div class="modal-header">
               <h4 class="modal-title p-2 p-lg-3 fw-bold">تماس با ما</h4>
